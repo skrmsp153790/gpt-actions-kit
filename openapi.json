@@ -1,0 +1,53 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Rain Music API",
+    "version": "1.0.0",
+    "description": "Get music recommendations based on weather themes like rain, sun, or night."
+  },
+  "servers": [
+    {
+      "url": "https://v0-gpt-actions-kit-clone.vercel.app"
+    }
+  ],
+  "paths": {
+    "/soundtrack": {
+      "get": {
+        "operationId": "getMusicByTheme",
+        "summary": "Get music recommendations by theme",
+        "parameters": [
+          {
+            "name": "theme",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["rain", "sun", "night"]
+            },
+            "description": "Theme to recommend music for"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of recommended tracks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tracks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
