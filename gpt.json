@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Rain Music Recommender",
+  "name_for_model": "rain_music_api",
+  "description_for_human": "Recommends music based on weather themes like rain, sun, or night.",
+  "description_for_model": "Recommends tracks using the Rain Music API. Use the /soundtrack endpoint with a 'theme' query parameter.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://v0-gpt-actions-kit-clone.vercel.app/openapi.json"
+  },
+  "logo_url": "",
+  "contact_email": "support@example.com",
+  "legal_info_url": ""
+}
